@@ -6,12 +6,12 @@ Você foi contratado para desenvolver um sistema de gerenciamento de tarefas par
 
 - Os usuários devem poder se registrar no sistema com um nome de usuário e senha.
 - Os usuários devem poder criar, visualizar, editar e excluir tarefas.
-- As tarefas devem ter um título, uma descrição, uma data de vencimento e um status (aberto, em andamento ou concluído).
+- ~~As tarefas devem ter um título, uma descrição, uma data de vencimento e um status (aberto, em andamento ou concluído).~~
 - Os usuários devem poder atribuir tarefas a outros usuários.
 - Os usuários devem poder visualizar uma lista de suas tarefas, bem como uma lista de tarefas atribuídas a eles por outros usuários.
 - Os usuários devem receber notificações por email quando uma tarefa for atribuída a eles ou quando houver uma atualização em uma tarefa existente.
 - Os usuários devem poder filtrar a lista de tarefas com base no status (aberto, em andamento ou concluído) e na data de vencimento.
-
+- Os usuários devem conseguir acessar registros de todas as alterações/operações feitas sobre uma atividade
 ## Requisitos Não Funcionais
 
 - O sistema deve ser fácil de usar e ter uma interface de usuário intuitiva.
