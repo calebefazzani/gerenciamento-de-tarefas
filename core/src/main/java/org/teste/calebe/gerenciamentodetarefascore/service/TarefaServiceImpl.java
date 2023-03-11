@@ -19,6 +19,6 @@ public class TarefaServiceImpl implements TarefaService {
 
     @Override
     public List<Tarefa> buscaTarefas() {
-        return dao.buscaTarefas();
+        return dao.buscaTarefas(null);
     }
 }
