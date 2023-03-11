@@ -4,10 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+import org.teste.calebe.gerenciamentodetarefascore.config.TestConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest("service.message=Hello")
+@ContextConfiguration(classes = TestConfig.class)
 public class MyServiceTest {
 
     @Autowired
@@ -18,7 +21,4 @@ public class MyServiceTest {
         assertThat(myService.message()).isNotNull();
     }
 
-    @SpringBootApplication
-    static class TestConfiguration {
-    }
 }

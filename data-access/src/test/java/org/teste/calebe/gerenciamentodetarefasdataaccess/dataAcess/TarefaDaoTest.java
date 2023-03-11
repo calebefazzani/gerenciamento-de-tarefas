@@ -6,11 +6,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.util.Assert;
 import org.teste.calebe.gerenciamentodetarefascore.contantes.StatusTarefa;
 import org.teste.calebe.gerenciamentodetarefascore.entidades.Tarefa;
 import org.teste.calebe.gerenciamentodetarefascore.filtros.TarefaFiltro;
+import org.teste.calebe.gerenciamentodetarefasdataaccess.config.TestConfig;
 import org.teste.calebe.gerenciamentodetarefasdataaccess.dataAccess.TarefaDAOImpl;
 import org.teste.calebe.gerenciamentodetarefasdataaccess.repositorio.TarefaRepositorio;
 
@@ -20,8 +25,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootTest
-@EntityScan(basePackageClasses = Tarefa.class)
+@ContextConfiguration(classes = TestConfig.class)
+@DataJpaTest
 public class TarefaDaoTest {
     @Autowired
     private TarefaRepositorio repositorio;

@@ -13,6 +13,7 @@ public class MyService {
     }
 
     public String message() {
+        serviceProperties.getClass();
         return this.serviceProperties.getMessage();
     }
 }
